@@ -55,6 +55,7 @@ resource "aws_vpc" "vpc4" {
 
 
 
+
 #resource "aws_<type_of_resource>" "<name>" {
 #   ..configs..
 #   ..key-value pair..
