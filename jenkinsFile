@@ -3,6 +3,10 @@
 pipeline {
     agent { label 'localhost' }
 
+    parameters {
+        booleanParam(name: 'is_deploy', defaultValue: false, description: "<b> This flag decides whether to apply terraform or not </b>")
+    }
+
     stages {
         stage('Terraform init') {
             steps {
@@ -21,6 +25,7 @@ pipeline {
             }
         }
         stage('terraform apply') {
+            when { params.is_deploy == true }
             steps {
 
                 sh """ 
