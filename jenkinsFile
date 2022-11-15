@@ -25,7 +25,7 @@ pipeline {
             }
         }
         stage('terraform apply') {
-            when { expression { params.is_deploy } }
+            when { branch "main" }
             steps {
 
                 sh """ 
