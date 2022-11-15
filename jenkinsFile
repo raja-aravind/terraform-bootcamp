@@ -4,7 +4,7 @@ pipeline {
     agent { label 'localhost' }
 
     parameters {
-        booleanParam(name: 'is_deploy', defaultValue: false, description: "<b> This flag decides whether to apply terraform or not </b>")
+        booleanParam(name: 'is_deploy', defaultValue: false, description: "<b> This flag decides whether to apply terraform or not <b>")
     }
 
     stages {
