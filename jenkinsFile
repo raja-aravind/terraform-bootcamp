@@ -8,7 +8,6 @@ pipeline {
             steps {
 
                 sh """
-                    cd terraform-bootcamp
                     /usr/local/bin/terraform init
                 """
             }
@@ -17,7 +16,6 @@ pipeline {
             steps {
 
                 sh """
-                    cd terraform-bootcamp
                     /usr/local/bin/terraform plan
                 """
             }
@@ -25,8 +23,7 @@ pipeline {
         stage('terraform apply') {
             steps {
 
-                sh """
-                    cd terraform-bootcamp
+                sh """ 
                     /usr/local/bin/terraform apply -auto-approve
                 """
             }
